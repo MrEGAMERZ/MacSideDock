@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-label="Mac Side Dock on the left edge of a Mac desktop">
+  <defs>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A3D45"/>
+      <stop offset="100%" stop-color="#1C1E24"/>
+    </linearGradient>
+    <linearGradient id="wallpaper" x1="0.05" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6EA8FF"/>
+      <stop offset="38%" stop-color="#3B6CB5"/>
+      <stop offset="72%" stop-color="#2A3A62"/>
+      <stop offset="100%" stop-color="#15182A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="22%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#A9D4FF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#A9D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="menubar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7F8FA" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#F7F8FA" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="dockglass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#D7DEEA" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="window" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBFBFC"/>
+      <stop offset="100%" stop-color="#ECEFF3"/>
+    </linearGradient>
+    <linearGradient id="finder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#63C4F7"/>
+      <stop offset="100%" stop-color="#1A7ED4"/>
+    </linearGradient>
+    <linearGradient id="safari" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3EC4FF"/>
+      <stop offset="100%" stop-color="#0066D6"/>
+    </linearGradient>
+    <linearGradient id="mail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6EC8FF"/>
+      <stop offset="100%" stop-color="#1478F0"/>
+    </linearGradient>
+    <linearGradient id="notes" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE36A"/>
+      <stop offset="100%" stop-color="#F5B400"/>
+    </linearGradient>
+    <linearGradient id="settings" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D5D8DE"/>
+      <stop offset="100%" stop-color="#8E939C"/>
+    </linearGradient>
+    <linearGradient id="music" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6B8A"/>
+      <stop offset="100%" stop-color="#C2185B"/>
+    </linearGradient>
+    <filter id="dockshadow" x="-40%" y="-20%" width="180%" height="140%">
+      <feDropShadow dx="8" dy="10" stdDeviation="16" flood-color="#06101F" flood-opacity="0.38"/>
+    </filter>
+    <filter id="windowshadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#06101F" flood-opacity="0.32"/>
+    </filter>
+    <clipPath id="frame">
+      <rect x="24" y="24" width="1232" height="712" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1280" height="760" rx="36" fill="#0E1014"/>
+  <rect x="24" y="24" width="1232" height="712" rx="28" fill="url(#chrome)"/>
+  <g clip-path="url(#frame)">
+    <rect x="24" y="24" width="1232" height="712" fill="url(#wallpaper)"/>
+    <rect x="24" y="24" width="1232" height="712" fill="url(#glow)"/>
+
+    <rect x="24" y="24" width="1232" height="38" fill="url(#menubar)"/>
+    <g fill="#F4F7FB" fill-opacity="0.86" font-family="system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif">
+      <circle cx="54" cy="43" r="5.5" fill="#F4F7FB" fill-opacity="0.92"/>
+      <text x="72" y="48" font-size="13" font-weight="600">Finder</text>
+      <text x="126" y="48" font-size="13" fill-opacity="0.7">File</text>
+      <text x="160" y="48" font-size="13" fill-opacity="0.7">Edit</text>
+      <text x="198" y="48" font-size="13" fill-opacity="0.7">View</text>
+      <text x="1088" y="48" font-size="12" fill-opacity="0.78">Tue 15 Sep</text>
+      <text x="1172" y="48" font-size="12" fill-opacity="0.9">9:41</text>
+    </g>
+
+    <g filter="url(#windowshadow)" transform="translate(268 128)">
+      <rect width="720" height="460" rx="14" fill="url(#window)"/>
+      <rect width="720" height="42" rx="14" fill="#F3F4F7"/>
+      <rect y="28" width="720" height="14" fill="#F3F4F7"/>
+      <circle cx="22" cy="21" r="6" fill="#FF5F57"/>
+      <circle cx="42" cy="21" r="6" fill="#FEBC2E"/>
+      <circle cx="62" cy="21" r="6" fill="#28C840"/>
+      <text x="360" y="26" text-anchor="middle" font-size="13" font-family="system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" fill="#6B7280">Safari</text>
+      <rect x="24" y="62" width="672" height="36" rx="8" fill="#FFFFFF"/>
+      <text x="40" y="85" font-size="12" font-family="system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" fill="#9AA3B2">apple.com</text>
+      <rect x="24" y="114" width="672" height="322" rx="10" fill="#EEF3FA"/>
+      <rect x="56" y="150" width="240" height="18" rx="6" fill="#C5D4EA"/>
+      <rect x="56" y="184" width="420" height="12" rx="6" fill="#D7E2F2"/>
+      <rect x="56" y="208" width="360" height="12" rx="6" fill="#D7E2F2"/>
+      <rect x="56" y="248" width="188" height="128" rx="14" fill="#FFFFFF"/>
+      <rect x="260" y="248" width="188" height="128" rx="14" fill="#FFFFFF"/>
+      <rect x="464" y="248" width="188" height="128" rx="14" fill="#FFFFFF"/>
+    </g>
+
+    <g filter="url(#dockshadow)" transform="translate(48 118)">
+      <rect width="86" height="524" rx="26" fill="url(#dockglass)" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="1.2"/>
+
+      <g transform="translate(19 28)">
+        <circle cx="-8" cy="24" r="2.4" fill="#F5F7FA"/>
+        <rect width="48" height="48" rx="12" fill="url(#finder)"/>
+      </g>
+
+      <g transform="translate(12 96)">
+        <circle cx="-1" cy="32" r="2.4" fill="#F5F7FA"/>
+        <rect x="4" y="4" width="62" height="62" rx="16" fill="url(#safari)"/>
+        <circle cx="35" cy="35" r="20" fill="none" stroke="#F7FBFF" stroke-width="3.4"/>
+        <polygon points="35,16 40,35 35,54 30,35" fill="#E11F28"/>
+        <polygon points="16,35 35,30 54,35 35,40" fill="#F4F7FB"/>
+      </g>
+
+      <g transform="translate(19 176)">
+        <rect width="48" height="48" rx="12" fill="url(#mail)"/>
+        <path d="M8 15h32v18H8z" fill="none" stroke="#F4F9FF" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M9 16l15 10 15-10" fill="none" stroke="#F4F9FF" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+
+      <g transform="translate(19 240)">
+        <circle cx="-8" cy="24" r="2.4" fill="#F5F7FA"/>
+        <rect width="48" height="48" rx="12" fill="url(#notes)"/>
+        <rect x="11" y="14" width="26" height="3" rx="1.4" fill="#8A5A12" opacity="0.55"/>
+        <rect x="11" y="22" width="20" height="3" rx="1.4" fill="#8A5A12" opacity="0.4"/>
+        <rect x="11" y="30" width="23" height="3" rx="1.4" fill="#8A5A12" opacity="0.3"/>
+      </g>
+
+      <g transform="translate(19 304)">
+        <rect width="48" height="48" rx="12" fill="url(#settings)"/>
+        <circle cx="24" cy="24" r="8" fill="none" stroke="#F4F6F8" stroke-width="3"/>
+        <circle cx="24" cy="24" r="3.2" fill="#F4F6F8"/>
+      </g>
+
+      <rect x="28" y="368" width="30" height="1.2" rx="0.6" fill="#FFFFFF" fill-opacity="0.35"/>
+
+      <g transform="translate(19 390)" opacity="0.92">
+        <rect width="48" height="48" rx="12" fill="url(#music)"/>
+        <path d="M20 16v18a6 6 0 1 0 4 5V22h12v8a6 6 0 1 0 4 5V16z" fill="#FFF5F8"/>
+      </g>
+
+      <g transform="translate(19 454)" opacity="0.78">
+        <rect width="48" height="48" rx="12" fill="#7C8899"/>
+        <rect x="12" y="14" width="24" height="20" rx="4" fill="#E8EDF4"/>
+      </g>
+    </g>
+  </g>
+</svg>
