@@ -1,6 +1,6 @@
-# Contributing to Mac Side Dock
+# Contributing to SIDEDOCK
 
-Thank you for wanting to work on this. Mac Side Dock is meant to feel like it shipped with the Mac: quiet, precise, and a little invisible until you need it.
+Thank you for wanting to work on this. SIDEDOCK is meant to feel like it shipped with the Mac: quiet, precise, and a little invisible until you need it.
 
 If a change makes the dock noisier, more permission-hungry, or less like the system Dock, it probably does not belong here.
 
@@ -12,7 +12,7 @@ We are not building a widget shelf, a window manager, or a Sidebar clone.
 
 ## Before you start
 
-1. Read the [README](README.md) and [FEATURES.md](FEATURES.md).
+1. Read the [README](README.md), [ROADMAP.md](ROADMAP.md), and [FEATURES.md](FEATURES.md).
 2. Run the app from Xcode on your machine. The feel is the product.
 3. Open an issue for anything larger than a small fix, so we do not duplicate work.
 
@@ -24,7 +24,7 @@ Requires **macOS 26.5+** and **Xcode 26**.
 open MacSideDock.xcodeproj
 ```
 
-Scheme: **MacSideDock**. Debug is unsandboxed on purpose, so dropping apps and folders behaves like a normal Mac app. Release (and `./scripts/make-dmg.sh`) is sandboxed.
+Scheme: **MacSideDock**. Debug and the DMG Release build are unsandboxed so dropping apps and folders behaves like a normal Mac app. The App Store entitlements file is kept for later.
 
 Tests:
 
@@ -58,6 +58,10 @@ If you add a user-facing capability, add it to `Preferences/FeatureCatalog.swift
 - Do not replace the JSON config with a hidden binary store.
 - Prefer a small PR that one person can review in one sitting.
 
+## License
+
+SIDEDOCK is MIT licensed. Keep the copyright notice in copies; otherwise you can use and ship the code.
+
 ## Pull requests
 
 1. Branch from the default branch.
@@ -69,7 +73,6 @@ If you add a user-facing capability, add it to `Preferences/FeatureCatalog.swift
 
 These help the project without requiring a full map of the animation code:
 
-- **App icon** — `MacSideDock/Assets.xcassets/AppIcon.appiconset` has no images yet. A Liquid Glass–aware macOS icon would immediately make the project look finished.
 - **README gallery** — real captures of the running dock, Settings, and folder peek, to replace the illustration.
 - **Homebrew cask** — once a GitHub Release exists.
 - **Localization** — Settings and menu bar copy.
@@ -88,4 +91,4 @@ If you believe one of those should exist, open an issue first. Do not send a sur
 
 Be kind, be specific, and assume the other person is trying to make the Dock feel better. Harassment or personal attacks are not acceptable.
 
-Questions that start with “I ran this on my display and…” are always welcome.
+See [ROADMAP.md](ROADMAP.md) for planned vs out of scope, and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for how we treat each other.

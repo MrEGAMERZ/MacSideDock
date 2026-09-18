@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/assets/icon.svg" width="112" height="112" alt="Mac Side Dock icon">
+  <img src="docs/assets/icon.png" width="112" height="112" alt="SIDEDOCK icon">
 </p>
 
-<h1 align="center">Mac Side Dock</h1>
+<h1 align="center">SIDEDOCK</h1>
 
 <p align="center">
   <strong>A secondary Dock for the unused edges of your Mac.</strong><br>
@@ -14,14 +14,14 @@
   <img src="https://img.shields.io/badge/macOS-26.5+-000000?logo=apple&logoColor=white" alt="macOS 26.5+">
   <img src="https://img.shields.io/badge/Swift-5-F05138?logo=swift&logoColor=white" alt="Swift 5">
   <img src="https://img.shields.io/badge/License-MIT-0071e3" alt="MIT License">
-  <img src="https://img.shields.io/badge/Sandbox-Release-5ac8fa" alt="Sandboxed in Release">
+  <img src="https://img.shields.io/badge/version-1.0.0-0071e3" alt="Version 1.0.0">
 </p>
 
 <p align="center">
-  <img src="docs/assets/hero.svg" width="920" alt="Mac Side Dock on the left edge of a Mac desktop, with hover magnification on Safari">
+  <img src="docs/assets/hero.svg" width="920" alt="SIDEDOCK on the left edge of a Mac desktop">
 </p>
 
-The system Dock occupies one edge of one screen. Ultrawide and multi-display setups still leave a tall strip of unused space on the left or right. **Mac Side Dock** is a second Dock for that edge: pinned apps, recents, folders, and the same click-to-hide behavior you already know.
+The system Dock occupies one edge of one screen. Ultrawide and multi-display setups still leave a tall strip of unused space on the left or right. **SIDEDOCK** is a second Dock for that edge: pinned apps, recents, folders, and the same click-to-hide behavior you already know.
 
 It is not a clone of [Sidebar](https://sidebarapp.net). It is the core Dock mechanic, written in Swift, auditable, and configured with a file you can keep in git.
 
@@ -29,13 +29,13 @@ It is not a clone of [Sidebar](https://sidebarapp.net). It is the core Dock mech
 
 Wide Macs waste the sides. Most third-party docks either become a widget board, or they ask for Accessibility and Screen Recording so they can draw live window previews.
 
-Mac Side Dock stays a Dock:
+SIDEDOCK stays a Dock:
 
 - A vertical glass panel on the **left** or **right** of **every display**
 - Apps you pin stay there whether they are running or not
 - Hover magnification with cosine falloff, neighbors spreading the way Apple’s Dock does
 - Auto-hide, revealed by moving the pointer to the edge
-- A JSON file at `~/.config/mac-side-dock/config.json` that reloads live
+- A JSON file at `~/.config/sidedock/config.json` that reloads live
 
 If you want media controls, a calendar, or a window switcher, this is the wrong app. If you want the Dock on the side of an ultrawide, this is the one to build on.
 
@@ -58,44 +58,58 @@ Full idea-to-code map, including what is still out: [FEATURES.md](FEATURES.md).
 
 ## Privacy
 
-Mac Side Dock does **not** request:
+SIDEDOCK does **not** request:
 
 - Accessibility
 - Screen Recording
 - Input Monitoring
 
-Edge detection uses `NSEvent` mouse monitors only. Apps launch through `NSWorkspace`. Folders you drop are stored as security-scoped bookmarks so Release builds can stay sandboxed.
+Edge detection uses `NSEvent` mouse monitors only. Apps launch through `NSWorkspace`. Folder drops store a path plus a security-scoped bookmark so the same code can stay sandboxed later for the App Store.
 
 There are no live window previews, and there will not be unless the project later takes Screen Recording on purpose. That is a product decision, not a missing checkbox.
 
 ## Install
 
-### Build a DMG
+**Download the DMG, drag the app into Applications, open it once.** That is the whole setup.
+
+1. Open `SIDEDOCK.dmg`.
+2. Drag **SIDEDOCK** onto **Applications**.
+3. Eject the disk image, then open SIDEDOCK from Applications.
+
+On first launch the app:
+
+- Lives in the menu bar (no icon in the system Dock)
+- Writes `~/.config/sidedock/config.json` if it is missing
+- Turns **Open at Login** on so it comes back after restart
+
+If you open it from the disk image instead of Applications, it asks to move itself there first. That keeps the login item pointed at a copy that still exists after you eject the installer.
+
+macOS may ask you to confirm the first open (Control-click → **Open**) until the build is notarized with an Apple Developer ID. Same account you will use later for the App Store.
+
+### Build the DMG yourself
 
 ```bash
 ./scripts/make-dmg.sh
 ```
 
-Output: `dist/MacSideDock.dmg`. Open it and drag **Mac Side Dock** into Applications.
+Output: `dist/SIDEDOCK-1.0.0.dmg` (and `dist/SIDEDOCK.dmg`). To sign with a Developer ID:
+
+```bash
+CODE_SIGN_IDENTITY="Developer ID Application: Your Name" ./scripts/make-dmg.sh
+```
 
 ### Run from Xcode
 
-Open `MacSideDock.xcodeproj`, select the **MacSideDock** scheme, and Run.
-
-First launch:
-
-1. The app hides from the system Dock (menu bar extra only).
-2. **Open at Login** turns on.
-3. A default config is written to `~/.config/mac-side-dock/config.json`.
-
-**Debug** runs from Xcode are not sandboxed, so local testing matches a normal Finder drop. **Release** (the DMG / archive) is sandboxed, with user-selected file bookmarks for folders you pin.
+Open `MacSideDock.xcodeproj`, select the **MacSideDock** scheme, and Run. Debug builds skip the move-to-Applications prompt and do not register a login item, so Xcode runs do not stick around after reboot.
 
 ### Requirements
 
 - macOS 26.5 or later
 - Xcode 26 to build from source
 
-Homebrew and signed GitHub Releases are welcome contributions. Until then, the DMG script is the distribution path.
+### App Store (later)
+
+The DMG is the path for now. App Store submission needs an Apple Developer Program account, sandbox entitlements in `MacSideDock/MacSideDock.entitlements`, screenshots, and `Product → Archive`. Direct download stays unsandboxed so config, Finder drops, and login work without extra permissions.
 
 ## Use
 
@@ -115,7 +129,7 @@ Settings is a small grouped window: size, magnification, edge, auto-hide, recent
 
 ## Configure
 
-Path: `~/.config/mac-side-dock/config.json`
+Path: `~/.config/sidedock/config.json`
 
 Edits on disk are picked up live. Invalid JSON is ignored until it parses again; the last good config stays in memory.
 
@@ -163,7 +177,7 @@ MacSideDockApp
     │       └── DockView          SwiftUI: icons, recents, folders, drop
     ├── StatusItemController      menu bar extra
     ├── RecentsStore
-    └── DockConfigStore           ~/.config/mac-side-dock/config.json
+    └── DockConfigStore           ~/.config/sidedock/config.json
 ```
 
 | Folder | What lives there |
@@ -177,7 +191,7 @@ Magnification math is isolated in `Dock/DockMagnification.swift`. Reveal policy 
 
 ## Contribute
 
-Mac Side Dock is open source because the Dock is personal, and the feel has to be right on real hardware. If you care about that, you should be able to read the code, change it, and ship a build the same afternoon.
+SIDEDOCK is open source because the Dock is personal, and the feel has to be right on real hardware. If you care about that, you should be able to read the code, change it, and ship a build the same afternoon.
 
 **Good first work:**
 
@@ -205,12 +219,6 @@ Principles we will not casually reverse:
 - Window switcher
 
 These were considered and left out of v1. See [FEATURES.md](FEATURES.md).
-
-## App Store
-
-Release is sandboxed with the hardened runtime. You can archive in Xcode and submit if you have an Apple Developer Program account.
-
-Apple reviews launcher utilities strictly. The DMG is the reliable path. App Store is possible, not promised.
 
 ## License
 

@@ -1,0 +1,7 @@
+{
+  "images" : [
+    { "filename" : "SettingsPreview.png", "idiom" : "universal", "scale" : "1x" },
+    { "filename" : "SettingsPreview@2x.png", "idiom" : "universal", "scale" : "2x" }
+  ],
+  "info" : { "author" : "xcode", "version" : 1 }
+}
