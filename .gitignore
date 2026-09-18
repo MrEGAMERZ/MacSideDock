@@ -12,3 +12,6 @@ xcuserdata/
 .swiftpm/
 .env
 .env.*
+
+# Marketing site lives in MrEGAMERZ/sidedock-site — not this repo
+site/
