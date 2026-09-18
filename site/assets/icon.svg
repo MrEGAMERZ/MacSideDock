@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="SIDEDOCK">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5B6578"/>
+      <stop offset="42%" stop-color="#2C3340"/>
+      <stop offset="100%" stop-color="#151820"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="38%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F4F6FA" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#C8D0DC" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="finder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#63C4F7"/>
+      <stop offset="100%" stop-color="#1A7ED4"/>
+    </linearGradient>
+    <linearGradient id="safari" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3EC4FF"/>
+      <stop offset="100%" stop-color="#0066D6"/>
+    </linearGradient>
+    <linearGradient id="mail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6EC8FF"/>
+      <stop offset="100%" stop-color="#1478F0"/>
+    </linearGradient>
+    <linearGradient id="notes" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE36A"/>
+      <stop offset="100%" stop-color="#F5B400"/>
+    </linearGradient>
+    <linearGradient id="settings" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D5D8DE"/>
+      <stop offset="100%" stop-color="#8E939C"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="114" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="114" fill="url(#shine)"/>
+  <rect x="18" y="18" width="476" height="476" rx="98" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+
+  <g filter="url(#shadow)">
+    <rect x="58" y="86" width="92" height="340" rx="28" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.38" stroke-width="1.5"/>
+  </g>
+
+  <g transform="translate(79 118)">
+    <rect width="50" height="50" rx="13" fill="url(#finder)"/>
+    <circle cx="-11" cy="25" r="3" fill="#F5F7FA"/>
+    <g transform="translate(79 66)">
+      <rect width="50" height="50" rx="13" fill="url(#safari)"/>
+      <circle cx="25" cy="25" r="16" fill="none" stroke="#F7FBFF" stroke-width="3"/>
+      <polygon points="25,11 29,25 25,39 21,25" fill="#E11F28"/>
+      <polygon points="11,25 25,21 39,25 25,29" fill="#F4F7FB"/>
+    </g>
+    <g transform="translate(0 132)">
+      <rect width="50" height="50" rx="13" fill="url(#mail)"/>
+      <path d="M8 16h34v18H8z" fill="none" stroke="#F4F9FF" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M9 17l16 11 16-11" fill="none" stroke="#F4F9FF" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(0 198)">
+      <rect width="50" height="50" rx="13" fill="url(#notes)"/>
+      <rect x="12" y="14" width="26" height="3.2" rx="1.4" fill="#8A5A12" opacity="0.55"/>
+      <rect x="12" y="22" width="20" height="3.2" rx="1.4" fill="#8A5A12" opacity="0.4"/>
+      <rect x="12" y="30" width="23" height="3.2" rx="1.4" fill="#8A5A12" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

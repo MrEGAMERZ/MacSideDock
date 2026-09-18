@@ -13,5 +13,6 @@ xcuserdata/
 .env
 .env.*
 
-# Marketing site lives in MrEGAMERZ/sidedock-site — not this repo
-site/
+
+# Built installers — attach via GitHub Releases, not git
+site/downloads/*.dmg
